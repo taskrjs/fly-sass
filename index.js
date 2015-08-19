@@ -1,9 +1,11 @@
 const sass = require("node-sass").render
 const assign = require("object-assign")
 
-module.exports = function () {
+module.exports = function (debug) {
   this.filter("sass", (data, options) => {
-    return this.defer(sass)(assign({ data: data.toString() }, options))
-      .then((result) => result.css.toString())
-  }, { ext: ".css" })
+    return this.defer(sass)(
+      assign({ data: data.toString() },
+      assign({ outFile: options.sourceMap ? "." : "" }, options))
+    ).then((result) => assign({ ext: ".css" }, result))
+  })
 }
