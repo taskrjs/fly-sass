@@ -26,8 +26,11 @@
     "url": "http://kashiro.github.com"
   },
   "dependencies": {
+    "eslint": "^0.21.2",
     "node-sass": "^3.2.0",
-    "object-assign": "^3.0.0"
+    "object-assign": "^3.0.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^0.21.2",
