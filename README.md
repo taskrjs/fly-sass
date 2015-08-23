@@ -23,12 +23,19 @@ npm install -D fly-sass
 
 ### Example
 
+Check [Flyfile.js](https://github.com/kashiro/fly-sass/blob/master/Flyfile.js) and [test](https://github.com/kashiro/fly-sass/blob/master/test) directory :)
+
 ```js
-export function* text () {
+export default function* () {
+  yield this.clear("test/style.css")
   yield this
-    .source("./src/styles/**/*.sass")
-    .sass({includePaths: ["./src/styles"]})
-    .target("dist/")
+    .source("test/src/style.scss")
+    .sass({
+      outputStyle: "compressed",
+      includePaths: ["test/src/imports"],
+      sourceMap: true
+    })
+    .target("test")
 }
 ```
 
