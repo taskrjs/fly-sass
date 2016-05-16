@@ -1,4 +1,4 @@
-export default function* () {
+exports.default = function * () {
   yield this.clear("test/style.css")
   yield this
     .source("test/src/style.scss")
