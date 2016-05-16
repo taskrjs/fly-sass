@@ -1,12 +1,17 @@
 var fs = require("fs")
-var fixture = fs.readFileSync(__dirname + "/fixture.css", "utf8")
-var css = fs.readFileSync(__dirname + "/style.css", "utf8")
+var join = require("path").join
 
-if (css !== fixture) {
+console.log('dirname: ', __dirname)
+console.log('files: ', fs.readdirSync(__dirname));
+
+var fix = join(__dirname, 'fixture.css')
+var css = join(__dirname, 'style.css')
+
+if (fs.readFileSync(fix, 'utf8') !== fs.readFileSync(css, 'utf8')) {
   console.error('See: diff test/fixture.css test/style.css')
   process.exit(1)
 }
 
-if (fs.existsSync(__dirname + "/style.css")) {
-  fs.unlinkSync(__dirname + "/style.css")
+if (fs.existsSync(css)) {
+  fs.unlinkSync(css)
 }
