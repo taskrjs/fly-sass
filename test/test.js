@@ -1,9 +1,6 @@
 var fs = require("fs")
 var join = require("path").join
 
-console.log('dirname: ', __dirname)
-console.log('files: ', fs.readdirSync(__dirname));
-
 var fix = join(__dirname, 'fixture.css')
 var css = join(__dirname, 'style.css')
 
