@@ -9,7 +9,8 @@
   "contributors": "https://github.com/kashiro/fly-sass/graphs/contributors",
   "main": "index.js",
   "scripts": {
-    "test": "fly && node test/test.js"
+    "pretest": "fly",
+    "test": "node test/test.js"
   },
   "keywords": [
     "fly",
