@@ -13,6 +13,7 @@
   },
   "keywords": [
     "fly",
+    "sass",
     "node-sass"
   ],
   "author": {
@@ -25,7 +26,7 @@
     "object-assign": "^3.0.0"
   },
   "devDependencies": {
-    "fly": "^0.7.1",
+    "fly": "^1.2.0",
     "fly-sass": "./"
   },
   "engines": {
