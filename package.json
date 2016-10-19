@@ -8,6 +8,9 @@
   "bugs": "https://github.com/kashiro/fly-sass/issues",
   "contributors": "https://github.com/kashiro/fly-sass/graphs/contributors",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "pretest": "fly",
     "test": "node test/test.js"
