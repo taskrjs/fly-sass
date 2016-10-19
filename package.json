@@ -12,8 +12,7 @@
     "index.js"
   ],
   "scripts": {
-    "pretest": "fly",
-    "test": "node test/test.js"
+    "test": "xo && tape test/*.js | tap-spec"
   },
   "keywords": [
     "fly",
@@ -30,8 +29,10 @@
     "object-assign": "^3.0.0"
   },
   "devDependencies": {
-    "fly": "^1.2.0",
-    "fly-sass": "./"
+    "fly": "beta",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2",
+    "xo": "*"
   },
   "engines": {
     "iojs": ">= 1.0.0",
