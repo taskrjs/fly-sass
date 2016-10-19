@@ -53,13 +53,15 @@ You may create source maps for your bundles. Simply provide the desired file pat
 > **Important:** It is _recommended_ that you provide `sourceMap` your desired path. However, if `sourceMap` is a `true`, you **must** then provide `outFile` your file path string.
 
 ```js
-exports.task1 = function * () {
+exports.default = function * () {
   yield this.source('src/app.sass')
     .sass({sourceMap: 'dist/css/app.css.map'})
     .target('dist');
 }
 
-exports.task1 = function * () {
+// OR
+
+exports.default = function * () {
   yield this.source('src/app.sass')
     .sass({sourceMap: true, outFile: 'dist/css/app.css.map'})
     .target('dist');
