@@ -1,5 +1,6 @@
 'use strict';
 
+const parse = require('path').parse;
 const format = require('path').format;
 const sass = require('node-sass').renderSync;
 
@@ -20,7 +21,20 @@ module.exports = function () {
 		// update extn to 'css'
 		file.base = file.base.replace(/(s[a|c]ss)/i, 'css');
 
+		const data = sass(opts);
+
 		// update the file's data
-		file.data = sass(opts).css;
+		file.data = data.css;
+
+		// if has `map` & needed opts
+		if (data.map) {
+			const o = parse(opts.outFile || opts.sourceMap);
+			// create new `file` entry
+			this._.files.push({
+				dir: o.dir,
+				base: o.base,
+				data: data.map
+			});
+		}
 	});
 };
