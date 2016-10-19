@@ -2,9 +2,11 @@
 
 const parse = require('path').parse;
 const format = require('path').format;
-const sass = require('node-sass').renderSync;
+const render = require('node-sass').render;
 
 module.exports = function () {
+	const sass = this.$.promisify(render);
+
 	// requires that `source()` is specifying MAIN files directly!
 	this.plugin('sass', {}, function * (file, opts) {
 		// ensure `opts.file` & not `opts.data`
@@ -21,7 +23,7 @@ module.exports = function () {
 		// update extn to 'css'
 		file.base = file.base.replace(/(s[a|c]ss)/i, 'css');
 
-		const data = sass(opts);
+		const data = yield sass(opts);
 
 		// update the file's data
 		file.data = data.css;
