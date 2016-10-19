@@ -1,12 +1,9 @@
 {
   "name": "fly-sass",
   "version": "1.0.0",
-  "description": "node sass plugin for Fly",
+  "description": "Node Sass plugin for Fly",
   "license": "MIT",
-  "homepage": "https://github.com/kashiro/fly-sass",
   "repository": "https://github.com/kashiro/fly-sass",
-  "bugs": "https://github.com/kashiro/fly-sass/issues",
-  "contributors": "https://github.com/kashiro/fly-sass/graphs/contributors",
   "main": "index.js",
   "files": [
     "index.js"
@@ -16,6 +13,7 @@
   },
   "keywords": [
     "fly",
+    "fly-plugin",
     "sass",
     "node-sass"
   ],
@@ -25,8 +23,7 @@
     "url": "http://kashiro.github.com"
   },
   "dependencies": {
-    "node-sass": "^3.2.0",
-    "object-assign": "^3.0.0"
+    "node-sass": "^3.10.0"
   },
   "devDependencies": {
     "fly": "beta",
@@ -35,7 +32,7 @@
     "xo": "*"
   },
   "engines": {
-    "iojs": ">= 1.0.0",
+    "node": ">= 4.6.0"
   },
   "xo": {
     "rules": {
