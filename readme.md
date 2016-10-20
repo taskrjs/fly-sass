@@ -35,7 +35,7 @@ exports.default = function * () {
 
 #### SASS vs SCSS
 
-There is no need to set `indentedSyntax` ([link](https://github.com/sass/node-sass#indentedsyntax)) --- the SASS parser will intelligently decipher if you are using the SASS syntax.
+There is no need to set [`indentedSyntax`](https://github.com/sass/node-sass#indentedsyntax) -- the SASS parser will intelligently decipher if you are using the SASS syntax.
 
 ```js
 exports.default = function * () {
