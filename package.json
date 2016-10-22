@@ -1,19 +1,19 @@
 {
   "name": "fly-sass",
   "version": "1.0.0",
-  "description": "node sass plugin for Fly",
+  "description": "Node Sass plugin for Fly",
   "license": "MIT",
-  "homepage": "https://github.com/kashiro/fly-sass",
   "repository": "https://github.com/kashiro/fly-sass",
-  "bugs": "https://github.com/kashiro/fly-sass/issues",
-  "contributors": "https://github.com/kashiro/fly-sass/graphs/contributors",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "pretest": "fly",
-    "test": "node test/test.js"
+    "test": "xo && tape test/*.js | tap-spec"
   },
   "keywords": [
     "fly",
+    "fly-plugin",
     "sass",
     "node-sass"
   ],
@@ -23,15 +23,21 @@
     "url": "http://kashiro.github.com"
   },
   "dependencies": {
-    "node-sass": "^3.2.0",
-    "object-assign": "^3.0.0"
+    "node-sass": "^3.10.0"
   },
   "devDependencies": {
-    "fly": "^1.2.0",
-    "fly-sass": "./"
+    "fly": "beta",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.2.2",
+    "xo": "*"
   },
   "engines": {
-    "iojs": ">= 1.0.0",
-    "node": ">= 0.11.0"
+    "node": ">= 4.6.0"
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "require-yield": 1
+    }
   }
 }
