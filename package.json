@@ -35,6 +35,7 @@
     "node": ">= 4.6.0"
   },
   "xo": {
+    "space": true,
     "rules": {
       "require-yield": 1
     }
