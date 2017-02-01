@@ -1,14 +1,13 @@
 'use strict';
 
-const parse = require('path').parse;
-const format = require('path').format;
-const render = require('node-sass').render;
+const {format, parse} = require('path');
+const {render} = require('node-sass');
 
-module.exports = function () {
-  const sass = this.$.promisify(render);
+module.exports = function (fly, utils) {
+  const sass = utils.promisify(render);
 
   // requires that `source()` is specifying MAIN files directly!
-  this.plugin('sass', {}, function * (file, opts) {
+  fly.plugin('sass', {}, function * (file, opts) {
     // ensure `opts.file` & not `opts.data`
     opts = Object.assign({}, opts, {file: format(file), data: null});
 
