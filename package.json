@@ -23,7 +23,7 @@
     "url": "http://kashiro.github.com"
   },
   "dependencies": {
-    "node-sass": "^3.10.0"
+    "node-sass": "^4.5.0"
   },
   "devDependencies": {
     "fly": "beta",
