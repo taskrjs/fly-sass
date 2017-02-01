@@ -797,9 +797,17 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-fly@beta:
-  version "2.0.10-beta"
-  resolved "https://registry.yarnpkg.com/fly/-/fly-2.0.10-beta.tgz#e62ccf687bd899d4e01f95ec264f515df708120a"
+fly-clear@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fly-clear/-/fly-clear-1.0.0.tgz#6244cbadf06bc3eabb89cca9541d38fd9e6c1548"
+  dependencies:
+    arrify "^1.0.1"
+    bluebird "^3.4.7"
+    rimraf "^2.5.4"
+
+fly@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/fly/-/fly-2.0.0.tgz#015ac87e46fe5a1421600c027b08f07fd2f16913"
   dependencies:
     bluebird "^3.4.7"
     clor "^5.0.0"
@@ -1994,7 +2002,7 @@ resumer@~0.0.0:
   dependencies:
     through "~2.3.4"
 
-rimraf@2, rimraf@^2.2.8:
+rimraf@2, rimraf@^2.2.8, rimraf@^2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
