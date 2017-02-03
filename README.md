@@ -1,6 +1,6 @@
 # fly-sass [![][travis-badge]][travis-link] [![npm package][npm-ver-link]][npm-pkg-link]
 
-> [node-sass](https://github.com/sass/node-sass) plugin for Fly
+> Compile SASS (via [node-sass](https://github.com/sass/node-sass)) with Fly
 
 ## Install
 
@@ -76,11 +76,13 @@ This plugin does not have any custom options. Please visit [`node-sass` options]
 
 > **Note:** You will _not_ be able to set the `file` or `data` options. These are done for you & cannot be changed.
 
-# License
+## License
 
-MIT © [Tomoyuki Kashiro](http://tomoyukikashiro.me) [et al](https://github.com/kashiro/fly-sass/graphs/contributors)
+MIT © Fly
+
+> A big thanks to [Tomoyuki Kashiro](http://tomoyukikashiro.me) for donating the plugin to Fly!
 
 [npm-pkg-link]: https://www.npmjs.org/package/fly-sass
 [npm-ver-link]: https://img.shields.io/npm/v/fly-sass.svg?style=flat-square
-[travis-link]:  https://travis-ci.org/kashiro/fly-sass
-[travis-badge]: http://img.shields.io/travis/kashiro/fly-sass.svg?style=flat-square
+[travis-link]:  https://travis-ci.org/flyjs/fly-sass
+[travis-badge]: http://img.shields.io/travis/flyjs/fly-sass.svg?style=flat-square
