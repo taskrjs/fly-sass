@@ -23,16 +23,17 @@
     "url": "http://kashiro.github.com"
   },
   "dependencies": {
-    "node-sass": "^3.10.0"
+    "node-sass": "^4.5.0"
   },
   "devDependencies": {
-    "fly": "beta",
+    "fly": "^2.0.0",
+    "fly-clear": "^1.0.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.2.2",
     "xo": "*"
   },
   "engines": {
-    "node": ">= 4.6.0"
+    "node": ">= 6"
   },
   "xo": {
     "space": true,

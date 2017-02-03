@@ -15,8 +15,8 @@ The globs within `source()` should always point to individual files.
 #### Basic
 
 ```js
-exports.default = function * () {
-  yield this.source('src/styles/style.scss').sass().target('dist')
+exports.styles = function * (fly) {
+  yield fly.source('src/styles/style.scss').sass().target('dist')
 }
 ```
 
@@ -25,8 +25,8 @@ exports.default = function * () {
 Simply create an array of individual file paths.
 
 ```js
-exports.default = function * () {
-  yield this.source([
+exports.styles = function * (fly) {
+  yield fly.source([
     'src/styles/client.scss',
     'src/styles/admin.scss'
   ]).sass().target('dist')
@@ -38,8 +38,8 @@ exports.default = function * () {
 There is no need to set [`indentedSyntax`](https://github.com/sass/node-sass#indentedsyntax) -- the SASS parser will intelligently decipher if you are using the SASS syntax.
 
 ```js
-exports.default = function * () {
-  yield this.source([
+exports.styles = function * (fly) {
+  yield fly.source([
     'src/styles/client.sass', // SASS
     'src/styles/admin.scss' // SCSS
   ]).sass().target('dist')
@@ -53,16 +53,16 @@ You may create source maps for your bundles. Simply provide the desired file pat
 > **Important:** It is _recommended_ that you provide `sourceMap` your desired path. However, if `sourceMap` is a `true`, you **must** then provide `outFile` your file path string.
 
 ```js
-exports.default = function * () {
-  yield this.source('src/app.sass')
+exports.styles = function * (fly) {
+  yield fly.source('src/app.sass')
     .sass({sourceMap: 'dist/css/app.css.map'})
     .target('dist');
 }
 
 // OR
 
-exports.default = function * () {
-  yield this.source('src/app.sass')
+exports.styles = function * (fly) {
+  yield fly.source('src/app.sass')
     .sass({sourceMap: true, outFile: 'dist/css/app.css.map'})
     .target('dist');
 }
